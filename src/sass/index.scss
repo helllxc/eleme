@@ -1,0 +1,65 @@
+@import 'common.scss';
+@import 'reset.scss';
+.wrap {
+  width: 960px;
+  margin: auto;
+  font-size: 14px;
+}
+*, :after, :before {
+  box-sizing: inherit;
+}
+body{
+  position: relative;
+}
+.header{
+  font-size: 14px;background-color: #f0f0f0;
+  .search{
+    float: right;margin: 10px;border: 1px solid #ccc;background: #fff;
+    input{
+      width:236px;line-height: 24px;border: 0;outline: 0;padding: 0 8px;margin: 4px 0;
+    }
+    .icon-search{
+      float: right;text-align: center;cursor: pointer;width:46px;font-size: 20px;border:0;
+      &:before{
+        content: "\e949";
+      }
+    }
+  }
+  .tab{
+    font-size: 18px;border-bottom: 1px #e6e6e6 solid;text-align: right;
+    .image{
+      margin-bottom: 6px;display: inline-block;width: 186px;height: 42px;position: relative;cursor: pointer;z-index: 2;
+      img{
+        width: 186px;height: 55px;vertical-align: middle;
+      }
+    }
+  }
+}
+.content{
+  background-color: #f0f0f0;
+  .goodsBar{
+    border: 1px solid #e6e6e6;
+    .classify{
+      line-height: 26px;padding: 10px 10px 10px 7em;background-color: #fff;position: relative;
+      .filterName{
+        left: 10px;top: 13px;color: #999;padding: 0 10px;margin-right: 8px;
+      }
+      .focus{color: #fff;background-color: #0089dc;border-radius: 3px;}
+      .item{
+        white-space: nowrap;display: inline-block;margin: 5px 6px;padding:0 10px;color: #666;
+        &:hover{
+          background-color: #f6f6f6;border-radius: 3px;
+        }
+      }
+      .item_focus{
+        color: #fff;background-color: #0089dc;border-radius: 3px;
+      }
+      .item_active{
+        line-height: 36px;background-color: #f6f6f6;border-radius: 0;margin: 0;padding: 0 16px;height: 38px;
+      }
+      .subbox{
+        background-color: #f6f6f6;padding: 6px 0;
+      }
+    }
+  }
+}

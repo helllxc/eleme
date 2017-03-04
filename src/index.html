@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="elemeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/angular.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+    <div class="header wrap clearfix">
+        <div class="clearfix"><div class="search clearfix"><a class="icon-search" title="搜索商家或美食"></a><input type="text" placeholder="搜索商家，美食..."></div></div>
+
+        <div class="tab"><div class="image"><img src="//faas.elemecdn.com/desktop/media/img/takeout.408a87.png" alt=""></div></div>
+    </div>
+    <div class="content wrap">
+        <div class="goodsBar" ng-controller="navCtrl">
+            <div class="classify">
+                <span class="filterName">
+                    <font>商家分类</font>
+                </span>
+                <a href="javascript:;" class="item" ng-repeat="x in name"  ng-click="changeCategory(x)" ng-class="{'item_focus':x.clickCategory&&clickCategory,'item_active':num==x.id} ">{{x.name}}</a>
+                <div class="subbox" ng-show="subCategories"><a href="javascript:;" class="item" ng-repeat="sub in subCateagory"  ng-click="changeSubCategory(sub)" ng-class="{'item_focus':num1==sub.id} ">{{sub.name}}</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    angular.module('elemeApp',[]).controller('navCtrl',['$scope','$http',function ($scope,$http) {
+        $scope.name = [];
+        $scope.subCateagory = [];
+        $scope.clickCategory = false;
+        $scope.subCategories = false;
+        $scope.num = 1;
+        $scope.num1 = 0;
+        $http.get('json/classify.json').success(function(data){
+            $scope.name = data[0].topic;
+            $scope.changeCategory=function(obj){
+                console.log(obj)
+                if(obj.id==1){
+                    $scope.clickCategory = true;
+                }else{
+                    $scope.clickCategory = false;
+                    $scope.num = obj.id;
+                    $scope.subCategories = true;
+                    $scope.subCateagory = data[1].content[($scope.num-2)].goods;
+                    $scope.num1 = 0;
+                }
+            }
+            $scope.changeSubCategory = function(obj){
+                console.log(obj.id)
+                $scope.num1 = obj.id;
+            }
+        })
+    }])
+</script>
+</html>

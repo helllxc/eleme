@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.clearfix::after { content: ''; display: block; clear: both; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.swap { width: 1200px; margin: 0 auto; }
+
+.mt20 { margin-top: 20px; }
+
+.mb20 { margin-bottom: 20px; }
+
+fieldset, img { border: 0; }
+
+.wrap { width: 960px; margin: 0 auto; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+a { color: #333; text-decoration: none; font-size: 12px; }
+
+a:hover { text-decoration: none; }
+
+body { color: #333; font-size: 14px; font-family: '微软雅黑'; margin: 0; }
+
+p, h1, h2, h3, h4, h5, dl, dt, dd, font { padding: 0; margin: 0; }
+
+span { font-size: 12px; }
+
+em, i { font-style: normal; }
+
+table, tbody, tfoot, thead, tr, th, td { border-collapse: collapse; border-spacing: 0; padding: 0px; margin: 0px; }
+
+.wrap { width: 960px; margin: auto; font-size: 14px; }
+
+*, :after, :before { box-sizing: inherit; }
+
+body { position: relative; }
+
+.header { font-size: 14px; background-color: #f0f0f0; }
+
+.header .search { float: right; margin: 10px; border: 1px solid #ccc; background: #fff; }
+
+.header .search input { width: 236px; line-height: 24px; border: 0; outline: 0; padding: 0 8px; margin: 4px 0; }
+
+.header .search .icon-search { float: right; text-align: center; cursor: pointer; width: 46px; font-size: 20px; border: 0; }
+
+.header .search .icon-search:before { content: "\e949"; }
+
+.header .tab { font-size: 18px; border-bottom: 1px #e6e6e6 solid; text-align: right; }
+
+.header .tab .image { margin-bottom: 6px; display: inline-block; width: 186px; height: 42px; position: relative; cursor: pointer; z-index: 2; }
+
+.header .tab .image img { width: 186px; height: 55px; vertical-align: middle; }
+
+.content { background-color: #f0f0f0; }
+
+.content .goodsBar { border: 1px solid #e6e6e6; }
+
+.content .goodsBar .classify { line-height: 26px; padding: 10px 10px 10px 7em; background-color: #fff; position: relative; }
+
+.content .goodsBar .classify .filterName { left: 10px; top: 13px; color: #999; padding: 0 10px; margin-right: 8px; }
+
+.content .goodsBar .classify .focus { color: #fff; background-color: #0089dc; border-radius: 3px; }
+
+.content .goodsBar .classify .item { white-space: nowrap; display: inline-block; margin: 5px 6px; padding: 0 10px; color: #666; }
+
+.content .goodsBar .classify .item:hover { background-color: #f6f6f6; border-radius: 3px; }
+
+.content .goodsBar .classify .item_focus { color: #fff; background-color: #0089dc; border-radius: 3px; }
+
+.content .goodsBar .classify .item_active { line-height: 36px; background-color: #f6f6f6; border-radius: 0; margin: 0; padding: 0 16px; height: 38px; }
+
+.content .goodsBar .classify .subbox { background-color: #f6f6f6; padding: 6px 0; }

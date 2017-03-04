@@ -1,0 +1,17 @@
+//变量
+$mainColor: #f60;
+$mainWidth:960px;
+
+.clearfix::after{
+	content:'';
+	display:block;
+	clear:both;
+}
+
+.left{float:left;}
+.right{float:right;}
+.swap{width:1200px;margin:0 auto;}
+.mt20{margin-top:20px;}
+.mb20{margin-bottom: 20px;}
+fieldset, img {border: 0;}
+.wrap{width: 960px;margin: 0 auto;}
